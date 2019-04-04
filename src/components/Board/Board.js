@@ -7,9 +7,11 @@ class Board extends Component {
 	}
 
 	render() {
+		const {name} = this.props;
+
 		return (
 			<div className="board">
-				Board
+				Board's {name}
 			</div>
 		)
 	}
