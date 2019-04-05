@@ -1,3 +1,25 @@
 .board {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #0079bf;
+
+  &__header {
+    height: 40px;
+    padding: 5px;
+    background-color: #2986bc;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  &__lists {
+    display: flex;
+    flex-grow: 1;
+    padding-top: 10px;
+  }
 }

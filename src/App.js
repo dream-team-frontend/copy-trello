@@ -8,7 +8,7 @@ class App extends Component {
 		const board = store.boards[0];
 
 		return (
-			<div className="App">
+			<div className="app">
 				<Board {...board} />
 			</div>
 		);

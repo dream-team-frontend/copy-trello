@@ -1,0 +1,25 @@
+.board-list {
+  width: 270px;
+  height: 100%;
+  margin: 0 5px;
+
+  &__content {
+    max-height: 100%;
+    border-radius: 3px;
+    background-color: #dfe3e6;
+  }
+
+  &__header {
+    padding: 8px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  &__cards {
+    padding: 0 8px;
+  }
+}
