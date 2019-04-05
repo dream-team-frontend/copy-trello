@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
+import {BoardListCard} from '../../components';
 import './BoardList.scss';
 
 class BoardList extends Component {
+	constructor(props) {
+		super(props);
+
+		this.renderBoardListCard = this.renderBoardListCard.bind(this);
+	}
+
+	renderBoardListCard() {
+		const {cards} = this.props;
+
+		return cards.map((card, index) => <BoardListCard key={index} {...card} />);
+	}
+
 	render() {
 		const {name} = this.props;
 
@@ -14,7 +27,7 @@ class BoardList extends Component {
 						</div>
 					</div>
 					<div className="board-list__cards">
-						Board list's {name}
+						{this.renderBoardListCard()}
 					</div>
 				</div>
 			</div>

@@ -12,7 +12,7 @@ class Board extends Component {
 	renderBoardLists() {
 		const {lists} = this.props;
 
-		return lists.map((list, index) => <BoardList key={index} {...list} />)
+		return lists.map((list, index) => <BoardList key={index} {...list} />);
 	}
 
 	render() {
