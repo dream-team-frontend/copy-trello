@@ -1,0 +1,7 @@
+const actions = {
+	ADD_BOARD_LIST: 'ADD_BOARD_LIST',
+	ADD_BOARD_LIST_CARD: 'ADD_BOARD_LIST_CARD',
+	MOVE_BOARD_LIST_CARD: 'MOVE_BOARD_LIST_CARD',
+};
+
+export default actions;
