@@ -15,8 +15,8 @@ const mapDispatchToProps = dispatch =>
 		onAddBoardList(boardId, name, order) {
 			dispatch(addBoardList(boardId, name, order))
 		},
-		onAddBoardListCard(boardId, BoardListId, name, order) {
-			dispatch(addBoardListCards(boardId, BoardListId, name, order));
+		onAddBoardListCard(boardId, boardListId, name, order) {
+			dispatch(addBoardListCards(boardId, boardListId, name, order));
 		},
 	});
 

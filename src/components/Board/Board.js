@@ -4,9 +4,15 @@ import './Board.scss';
 
 class Board extends Component {
 	renderBoardLists() {
-		const {board} = this.props;
+		const {board, onAddBoardListCard} = this.props;
 
-		return board.lists.map((list, index) => <BoardList key={index} {...list} />);
+		return board.lists.map((list, index) => (
+			<BoardList key={index}
+			           boardId={board.id}
+			           onAddBoardListCard={onAddBoardListCard}
+			           {...list}
+			/>
+		));
 	}
 
 	render() {

@@ -4,16 +4,12 @@ import boardLists from './boardLists';
 const board = (state = {}, action) => {
 	switch (action.type) {
 		case actions.ADD_BOARD_LIST:
-			return (state.id !== action.boardId)
-				? state
-				: {
+			return {
 					...state,
 					lists: boardLists(state.lists, action),
 				};
 		case actions.ADD_BOARD_LIST_CARD:
-			return (state.id !== action.boardId)
-				? state
-				: {
+			return {
 					...state,
 					lists: boardLists(state.lists, action),
 				};
