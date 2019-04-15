@@ -3,16 +3,10 @@ import {BoardList} from '../../components';
 import './Board.scss';
 
 class Board extends Component {
-	constructor(props) {
-		super(props);
-
-		this.renderBoardLists = this.renderBoardLists.bind(this);
-	}
-
 	renderBoardLists() {
-		const {lists} = this.props;
+		const {board} = this.props;
 
-		return lists.map((list, index) => <BoardList key={index} {...list} />);
+		return board.lists.map((list, index) => <BoardList key={index} {...list} />);
 	}
 
 	render() {

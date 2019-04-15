@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
+import initialStore from './store';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -11,7 +12,7 @@ const store = createStore(
 	rootReducer,
 	(localStorage['copy-trello-store'])
 		? JSON.parse(localStorage['copy-trello-store'])
-		: {}
+		: initialStore
 );
 
 // TODO: Перенести подписку и сохранение состояния в middleware Redux

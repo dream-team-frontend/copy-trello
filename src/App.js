@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
-import {Board} from './components';
-import store from './store';
+import {BoardContainer} from './containers/BoardContainer';
 import './App.css';
 
 class App extends Component {
 	render() {
-		const board = store.boards[0];
-
 		return (
 			<div className="app">
-				<Board {...board} />
+				<BoardContainer />
 			</div>
 		);
 	}
