@@ -16,7 +16,7 @@ class Board extends Component {
 	}
 
 	render() {
-		const {name} = this.props;
+		const {board, name} = this.props;
 
 		return (
 			<div className="board">
@@ -24,7 +24,7 @@ class Board extends Component {
 					<div className="board__name">Board: {name}</div>
 				</div>
 				<div className="board__lists">
-					{this.renderBoardLists()}
+					{board.lists && this.renderBoardLists()}
 				</div>
 			</div>
 		)
