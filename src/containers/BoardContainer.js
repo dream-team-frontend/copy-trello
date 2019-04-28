@@ -1,9 +1,27 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Board} from '../components';
+import { Board } from '../components';
 import {
+	fetchBoard,
 	addBoardList,
 	addBoardListCards,
-} from '../actions'
+} from '../actions';
+
+class BoardContainer extends Component {
+	componentDidMount() {
+		this.props.fetchBoard(1);
+	}
+
+	render() {
+		const { board, onAddBoardList, onAddBoardListCard } = this.props;
+
+		return (
+			<Board board={board}
+			       onAddBoardList={onAddBoardList}
+			       onAddBoardListCard={onAddBoardListCard} />
+		)
+	}
+}
 
 const mapStateToProps = state =>
 	({
@@ -12,6 +30,9 @@ const mapStateToProps = state =>
 
 const mapDispatchToProps = dispatch =>
 	({
+		fetchBoard(id) {
+			dispatch(fetchBoard(id));
+		},
 		onAddBoardList(boardId, name, order) {
 			dispatch(addBoardList(boardId, name, order))
 		},
@@ -20,7 +41,7 @@ const mapDispatchToProps = dispatch =>
 		},
 	});
 
-export const BoardContainer = connect(
+export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Board);
+)(BoardContainer);
