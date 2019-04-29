@@ -1,4 +1,4 @@
-import actions from '../actionsNames';
+import { actions } from '../actions';
 
 const boardListCard = (state = {}, action) => {
 	switch (action.type) {

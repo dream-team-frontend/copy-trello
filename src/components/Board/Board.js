@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BoardList} from '../../components';
+import BoardList from '../BoardList';
 import './Board.scss';
 
 class Board extends Component {

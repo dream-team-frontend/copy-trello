@@ -1,5 +1,4 @@
 import board from "./board";
-
 import { actions } from '../actions';
 
 const boards = (state = [], action) => {

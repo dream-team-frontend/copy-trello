@@ -1,4 +1,4 @@
-import actions from '../actionsNames';
+import { actions } from '../actions';
 import boardListCard from './boardListCard';
 
 const boardListCards = (state = [], action) => {
