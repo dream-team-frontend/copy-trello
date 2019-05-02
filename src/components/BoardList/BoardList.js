@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BoardListCard from '../BoardListCard';
 import './BoardList.scss';
+import AddCard from "../AddCard/AddCard";
 
 class BoardList extends Component {
 	constructor(props) {
@@ -36,7 +37,11 @@ class BoardList extends Component {
 					<div className="board-list__cards">
 						{this.renderBoardListCard()}
 					</div>
+
 					<div className="board-list__footer">
+
+                        <AddCard/>
+
 						<textarea className="board-list-card"
 						          ref={this.newCardName}
 						          style={{width: "100%"}}
